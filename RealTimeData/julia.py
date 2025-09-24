@@ -22,6 +22,7 @@ c_imag = -0.42193
 
 # 2. decorator 
 @timefn
+@profile
 def calculate_Julia_set(maxiter, zs, cs):
 
     output = [0] * len(zs)
