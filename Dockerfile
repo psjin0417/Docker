@@ -17,4 +17,4 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # 여기에 line_profiler와 snakeviz를 추가합니다.
-RUN pip3 install line_profiler snakeviz matplotlib
+RUN pip3 install line_profiler snakeviz matplotlib memory_profiler
