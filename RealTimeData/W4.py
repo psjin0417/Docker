@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('TkAgg')  # GUI 백엔드로 TkAgg를 사용하도록 명시적으로 설정
+
 import matplotlib.pyplot as plt
 import time
 
@@ -26,7 +29,7 @@ import time
 
 
 data_size = (640,640)
-@profile
+#@profile
 def diffusion(u_in,u_out, dt, D=1.0):
     xmax, ymax = data_size
 
@@ -71,8 +74,8 @@ def dropInk(max_iter):
 if __name__ == '__main__':
 
     run_time, u_init, u = dropInk(max_iter=100)
-    # plt.figure(figsize=(5,5))
-    # plt.imshow(u_init)
-    # plt.axis("equal")
-    # plt.savefig('diffusion_simulation.png')
+    plt.figure(figsize=(5,5))
+    plt.imshow(u_init)
+    plt.axis("equal")
+    plt.show()
     print(run_time)
